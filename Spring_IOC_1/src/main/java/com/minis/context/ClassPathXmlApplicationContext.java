@@ -25,8 +25,8 @@ public class ClassPathXmlApplicationContext implements BeanFactory {
 
     //context再对外提供一个getBean，底下就是调用的BeanFactory对应的方法
     @Override
-    public Object getBeans(String beanName) throws BeansException {
-        return this.beanFactory.getBeans(beanName);
+    public Object getBean(String beanName) throws BeansException {
+        return this.beanFactory.getBean(beanName);
     }
 
     @Override

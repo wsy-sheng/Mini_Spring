@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.Map;
 
 
-public class ClassPathXmlApplicationContext1 {
+public class ClassPathXmlApplicationContext0 {
     private List<BeanDefinition> beanDefinitions = new ArrayList<>();
     private Map<String, Object> singletons = new HashMap<>();
     //构造器获取外部配置，解析出Bean的定义，形成内存映像
-    public ClassPathXmlApplicationContext1(String fileName) {
+    public ClassPathXmlApplicationContext0(String fileName) {
         this.readXml(fileName);
         this.instanceBeans();
     }

@@ -14,7 +14,7 @@ public class SimpleBeanFactory implements BeanFactory{
 
     // getBean, 容器的核心方法
     @Override
-    public Object getBeans(String beanName) throws BeansException {
+    public Object getBean(String beanName) throws BeansException {
         // 先尝试直接拿Bean实例
         Object singleton = singletons.get(beanName);
         // 如果此时还没有这个Bean的实例，则获取他的定义来创建实例

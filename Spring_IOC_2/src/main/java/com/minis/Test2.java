@@ -10,7 +10,7 @@ public class Test2 {
     public static void main(String[] args) throws BeansException {
         // com.minis.context.ClassPathXmlApplicationContext
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
-        AService aService = (AService)ctx.getBeans("aservice");
+        AService aService = (AService)ctx.getBean("aservice");
         aService.sayHello();
     }
 }
