@@ -12,6 +12,7 @@
         <module>Spring_IOC_1</module>
         <module>Spring_IOC_2</module>
         <module>Spring_IOC_3</module>
+        <module>Spring_IOC_4</module>
     </modules>
 
     <dependencies>
