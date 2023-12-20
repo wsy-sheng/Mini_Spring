@@ -17,6 +17,7 @@
         <module>Spring_MVC_1</module>
         <module>Spring_MVC_2</module>
         <module>Spring_MVC_3</module>
+        <module>Spring_MVC_4</module>
     </modules>
 
     <dependencies>

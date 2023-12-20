@@ -13,11 +13,11 @@ public class App
     public static void main( String[] args ) throws LifecycleException {
         System.out.println( "Hello World!" );
         Tomcat tomcat = new Tomcat();
-        String webappDirLocation = "Spring_MVC_3/WebContent";
+        String webappDirLocation = "Spring_MVC_4/WebContent";
         StandardContext context = (StandardContext) tomcat.addWebapp("/", new File(webappDirLocation).getAbsolutePath());
 
         Connector connector = new Connector();
-        connector.setPort(8080);
+        connector.setPort(8081);
         tomcat.setConnector(connector);
         tomcat.start();
         tomcat.getServer().await();
