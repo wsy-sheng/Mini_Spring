@@ -6,30 +6,33 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * 属性编辑器注册支持，支持默认的属性编辑器以及客户编辑器
+ */
 public class PropertyEditorRegistrySupport {
 	private Map<Class<?>, PropertyEditor> defaultEditors;
 	private Map<Class<?>, PropertyEditor> customEditors;
 
 	public PropertyEditorRegistrySupport() {
-		registerDefaultEditors();
+		registerDefaultEditors(); //不同数据类型的参数转换器editor
 	}
 
 	/**
-	 * 注册默认的转换器editor
+	 * 注册默认的编辑器editor
 	 */
 	protected void registerDefaultEditors() {
 		createDefaultEditors();
 	}
 
 	/**
-	 * 获取默认的转换器editor
+	 * 获取默认的编辑器editor
 	 */
 	public PropertyEditor getDefaultEditor(Class<?> requiredType) {
 		return this.defaultEditors.get(requiredType);
 	}
 
 	/**
-	 * 创建默认的转换器editor，对每一种数据类型规定一个默认的转换器
+	 * 创建默认的编辑器editor，对每一种数据类型规定一个默认的编辑器
 	 */
 	private void createDefaultEditors() {
 		this.defaultEditors = new HashMap<>(64);
@@ -50,7 +53,7 @@ public class PropertyEditorRegistrySupport {
 	}
 
 	/**
-	 * 注册客户化转换器
+	 * 注册客户化编辑器
 	 */
 	public void registerCustomEditor( Class<?> requiredType,  PropertyEditor propertyEditor) {
 		if (this.customEditors == null) {
@@ -60,7 +63,7 @@ public class PropertyEditorRegistrySupport {
 	}
 
 	/**
-	 * 查找客户化转换器
+	 * 查找客户化编辑器
 	 */
 	public PropertyEditor findCustomEditor( Class<?> requiredType) {
 		Class<?> requiredTypeToUse = requiredType;
@@ -73,7 +76,7 @@ public class PropertyEditorRegistrySupport {
 	}
 
 	/**
-	 * 获取客户化转换器
+	 * 获取客户化编辑器
 	 */
 	public PropertyEditor getCustomEditor( Class<?> requiredType) {
 		if (requiredType == null || this.customEditors == null) {

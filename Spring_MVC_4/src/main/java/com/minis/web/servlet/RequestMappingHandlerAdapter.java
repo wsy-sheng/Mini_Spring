@@ -48,10 +48,10 @@ public class RequestMappingHandlerAdapter implements HandlerAdapter {
         int i = 0;
         //对调用方法里的每一个参数，处理绑定
         for (Parameter methodParameter : methodParameters) {
-            Object methodParamObj = methodParameter.getType().newInstance();
+            Object methodParamObj = methodParameter.getType().newInstance(); //生成User对象
             //给这个参数创建WebDataBinder
             WebDataBinder wdb = binderFactory.createBinder(request, methodParamObj, methodParameter.getName());
-            webBindingInitializer.initBinder(wdb);
+            webBindingInitializer.initBinder(wdb);      //注册自定义Date编辑器
             wdb.bind(request);
             methodParamObjs[i] = methodParamObj;
             i++;

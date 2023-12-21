@@ -9,7 +9,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class BeanWrapperImpl extends AbstractPropertyAccessor {
-    Object wrappedObject;
+    Object wrappedObject; //目标对象
     Class<?> clz;
 
 	public BeanWrapperImpl(Object object) {
@@ -21,7 +21,7 @@ public class BeanWrapperImpl extends AbstractPropertyAccessor {
     @Override
     public void setPropertyValue(PropertyValue pv) {
         BeanPropertyHandler propertyHandler = new BeanPropertyHandler(pv.getName());
-        PropertyEditor pe = this.getCustomEditor(propertyHandler.getPropertyClz());
+        PropertyEditor pe = this.getCustomEditor(propertyHandler.getPropertyClz()); //获取当前属性对应的属性编辑器
         if (pe == null) {
             pe = this.getDefaultEditor(propertyHandler.getPropertyClz());
 
@@ -35,7 +35,7 @@ public class BeanWrapperImpl extends AbstractPropertyAccessor {
         }
 
     }
-
+    /**生成bean每个属性对应的类，以及相应的get,set方法*/
     class BeanPropertyHandler {
         Method writeMethod = null;
         Method readMethod = null;

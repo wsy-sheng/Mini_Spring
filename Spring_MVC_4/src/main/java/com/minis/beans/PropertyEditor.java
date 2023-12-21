@@ -1,7 +1,7 @@
 package com.minis.beans;
 
 /**
- * 类型转换器
+ * 属性编辑器
  */
 public interface PropertyEditor {
     /**

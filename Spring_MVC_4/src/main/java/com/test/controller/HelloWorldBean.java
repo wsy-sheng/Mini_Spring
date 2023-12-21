@@ -29,5 +29,9 @@ public class HelloWorldBean {
     public String doTest4(User user) { //  http://localhost:8080/test4?name=wsy&id=2&birthday=2023-12-02
         return user.getId() +" "+user.getName() + " " + user.getBirthday();
     }
+    @RequestMapping("/test5")
+    public String doTest5(Integer n) {
+        return "test 5, hello world!"+n;
+    }
 
 }
