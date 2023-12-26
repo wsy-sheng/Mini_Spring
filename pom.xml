@@ -19,6 +19,9 @@
         <module>Spring_MVC_3</module>
         <module>Spring_MVC_4</module>
         <module>Spring_MVC_5</module>
+        <module>Spring_JDBC_1</module>
+        <module>Spring_JDBC_2</module>
+        <module>Spring_JDBC_3</module>
     </modules>
 
     <dependencies>
@@ -53,6 +56,13 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <version>9.0.58</version>
         </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.30</version>
+        </dependency>
+
 
 
 
