@@ -22,6 +22,7 @@
         <module>Spring_JDBC_1</module>
         <module>Spring_JDBC_2</module>
         <module>Spring_JDBC_3</module>
+        <module>Spring_AOP_1</module>
     </modules>
 
     <dependencies>
