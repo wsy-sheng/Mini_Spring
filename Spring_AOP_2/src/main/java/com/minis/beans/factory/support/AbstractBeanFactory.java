@@ -89,7 +89,7 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
         }
 
         Object object = null;
-        FactoryBean<?> factory = (FactoryBean<?>) beanInstance;  // singleton -> beanInstance -> FactoryBean
+        FactoryBean<?> factory = (FactoryBean<?>) beanInstance;
         object = getObjectFromFactoryBean(factory, beanName);
         return object;
     }
